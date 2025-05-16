@@ -46,8 +46,18 @@ INSERT INTO `alumno` (`numCuenta_alumno`, `nombre_alumno`, `genero`, `fecha_naci
 ('202410001', 'Juan Perez Ramirez', NULL, NULL, NULL, NULL, 'juaniris8748@gmail.com', 7.5),
 ('424094371', 'Jesus Santiago Arias', 'Masculino', '2005-01-04', 'Paseo Del Oro, Joyas de Cuautitlán, CP 54803 , Mexico', '5573830651', 'jesusiris8748@gmail.mx', 9.1),
 ('424569871', 'Sarahi Santiago Arias', NULL, NULL, NULL, NULL, 'sarahi129@unam.mx', 9.5),
-('456742569', 'Jesus Santiago Gomez', NULL, NULL, NULL, NULL, 'jesusi88is8748@gmail.com', 10);
-
+('456742569', 'Jesus Santiago Gomez', NULL, NULL, NULL, NULL, 'jesusi88is8748@gmail.com', 10),
+('202410002', 'María López Torres', 'Femenino', '2004-09-12', 'Calle Palma 123, CDMX', '5523456789', 'maria.lopez@gmail.com', 8.6),
+('202410003', 'Carlos Méndez Rojas', 'Masculino', '2003-03-22', 'Av. Revolución 456, CDMX', '5534567890', 'carlosmr@gmail.com', 7.9),
+('202410004', 'Ana Paula Jiménez', 'Femenino', '2005-07-30', 'Priv. Hidalgo 32, Toluca', '5545678901', 'ap.jimenez@hotmail.com', 9.2),
+('202510001', 'Ana López Martínez', 'Femenino', '2004-05-14', 'Av. Insurgentes 123', '5512345678', 'ana.lopez@example.com', 8.9),
+('202510002', 'Carlos Ramírez Gómez', 'Masculino', '2003-11-21', 'Calle Reforma 456', '5523456789', 'carlos.ramirez@example.com', 7.2),
+('202510003', 'Daniela Morales Díaz', 'Femenino', '2005-02-02', 'Col. Centro, CDMX', '5534567890', 'daniela.morales@example.com', 9.0),
+('202410005', 'Gabriela Ramírez Soto', 'Femenino', '2004-02-15', 'Calle Cedros 111, Naucalpan', '5523451111', 'gabriela.ramirez@gmail.com', 8.4),
+('202410006', 'Ricardo Sánchez Vega', 'Masculino', '2003-06-10', 'Av. Juárez 99, Ecatepec', '5534562222', 'ricardo.sv@hotmail.com', 7.8),
+('202410007', 'Daniela Torres León', 'Femenino', '2004-11-01', 'Col. Centro 45, Toluca', '5545673333', 'daniela.torres@outlook.com', 9.0),
+('202410008', 'Alejandro Reyes Paredes', 'Masculino', '2005-01-20', 'Insurgentes Sur 760, CDMX', '5556784444', 'alejandro.reyes@gmail.com', 8.2),
+('202410009', 'Valeria Mendoza Cruz', 'Femenino', '2004-08-08', 'Callejón Flores 18, Tlalnepantla', '5567895555', 'valeria.mc@hotmail.com', 9.3);
 -- --------------------------------------------------------
 
 --
@@ -71,8 +81,16 @@ CREATE TABLE `alumno_asignaturas` (
 INSERT INTO `alumno_asignaturas` (`id_historial`, `numCuenta_alumno`, `clave_asig`, `grupo`, `fecha_inscripcion`, `aprobada`, `calificacion`) VALUES
 (4, '424094371', '100', '1101', '0000-00-00', 0, NULL),
 (5, '424094371', '101', '1101', '0000-00-00', 0, NULL),
-(6, '424094371', '106', '1101', '0000-00-00', 0, NULL);
-
+(6, '424094371', '106', '1101', '0000-00-00', 0, NULL),
+(7, '202410002', '100', '1101', '0000-00-00', 0, NULL),
+(8, '202410002', '101', '1101', '0000-00-00', 0, NULL),
+(9, '202410003', '106', '1101', '0000-00-00', 0, NULL),
+(10, '202410004', '105', '1101','0000-00-00', 0, NULL),
+(11, '202510003', '105', '1101','0000-00-00', 0, NULL),
+(12, '202510002','105', '1101','0000-00-00', 0, NULL),
+(13, '202410005', '201', '1101', '0000-00-00', 0, NULL),
+(14, '202410006', '200', '1101', '0000-00-00', 0, NULL), 
+(15, '202410007', '201', '1101', '0000-00-00', 0, NULL); 
 -- --------------------------------------------------------
 
 --
@@ -110,7 +128,10 @@ INSERT INTO `asignatura` (`clave_asig`, `nombre_asignatura`, `creditos_asig`, `s
 ('104', 'TALLER DE COMPONENTES DE HARDWARE', 3, 1, '308'),
 ('105', 'ANALISIS Y DISEÑO DE ALGORITMOS', 8, 1, '308'),
 ('106', 'MATEMATICAS I', 8, 1, '308'),
-('107', 'PROGRAMACION I', 8, 1, '308');
+('107', 'PROGRAMACION I', 8, 1, '308')
+('200', 'Contabilidad I', 6, 1, '308'),
+('201', 'Economía I', 6, 1, '308'),
+('202', 'Matemáticas Financieras', 8, 1, '308');
 
 -- --------------------------------------------------------
 
@@ -156,7 +177,15 @@ CREATE TABLE `dosificacion` (
 
 INSERT INTO `dosificacion` (`id_dosificacion`, `clave_lic`, `numCuenta_alumno`, `nombre_alumno`, `turno`, `fecha_atcion`, `hora_atcion`, `num_atcion`) VALUES
 (1746419985, '308', '456742569', 'Jesus Santiago Gomez', 'Matutino', '2025-05-06', '23:39:00', 3),
-(1746491407, '308', '424094371', 'Jesus Santiago Arias', 'Matutino', '2025-05-09', '20:09:00', 2);
+(1746491407, '308', '424094371', 'Jesus Santiago Arias', 'Matutino', '2025-05-09', '20:09:00', 2),
+(1746491410, '308', '202410002', 'María López Torres', 'Vespertino', '2025-05-10', '18:00:00', 4),
+(1746491411, '308', '202410003', 'Carlos Méndez Rojas', 'Matutino', '2025-05-10', '08:30:00', 5),
+(1746491500, '308', '202510001', 'Ana López Martínez', 'Vespertino', '2025-05-10', '15:00:00', 1),
+(1746491412, '308', '202410004', 'Ana Paula Jiménez', 'Vespertino', '2025-05-10', '16:00:00', 6),
+(1746491413, '308', '202410003', 'Carlos Méndez Rojas', 'Matutino', '2025-05-11', '09:00:00', 7),
+(1746491414, '308', '202410002', 'María López Torres', 'Matutino', '2025-05-11', '10:00:00', 8),
+(1746491415, '308', '202410004', 'Ana Paula Jiménez', 'Vespertino', '2025-05-12', '15:00:00', 9),
+(1746491416, '308', '202410001', 'Juan Pérez García', 'Matutino', '2025-05-12', '08:30:00', 10);
 
 -- --------------------------------------------------------
 
